@@ -1,0 +1,127 @@
+# ╔══════════════════════════════════════════════════════════════════════════╗
+# ║          LX-BOT ULTIMATE v5.0 — Python Requirements                     ║
+# ║    Next-Gen Enterprise Penetration Testing & Bug Bounty Framework        ║
+# ╚══════════════════════════════════════════════════════════════════════════╝
+#
+# INSTALL:
+#   pip install -r requirements.txt
+#   pip install -r requirements.txt --break-system-packages   ← Kali/Parrot/Ubuntu
+#
+# Python 3.9+ required  |  Python 3.11+ recommended for best performance
+
+# ──────────────────────────────────────────────────────────────────────────
+# CORE — Required by all modules (lx.py, lx-bot.py, resource_manager.py)
+# ──────────────────────────────────────────────────────────────────────────
+
+# Beautiful, colourful terminal UI – progress bars, tables, panels, live display
+rich>=13.7.0
+
+# ──────────────────────────────────────────────────────────────────────────
+# REPORTING — Required by report_generator.py
+# ──────────────────────────────────────────────────────────────────────────
+
+# Interactive charts & graphs inside HTML reports (Plotly CDN used; local fallback)
+plotly>=5.18.0
+
+# HTTP requests for optional API enrichment (NVD, Shodan, VirusTotal)
+requests>=2.31.0
+
+# HTML templating helpers
+Jinja2>=3.1.0
+
+# ──────────────────────────────────────────────────────────────────────────
+# NETWORK & ASYNC UTILITIES
+# ──────────────────────────────────────────────────────────────────────────
+
+# Async HTTP client — used for internal API probing & fast header checks
+aiohttp>=3.9.0
+
+# DNS resolution & zone transfer support
+dnspython>=2.4.0
+
+# IP address manipulation & subnet calculations
+netaddr>=0.10.1
+
+# ──────────────────────────────────────────────────────────────────────────
+# PARSING & DATA
+# ──────────────────────────────────────────────────────────────────────────
+
+# XML/HTML parsing (Nmap XML, WPScan reports, Nikto output)
+lxml>=5.0.0
+
+# HTML parsing fallback
+beautifulsoup4>=4.12.0
+
+# YAML configuration support (Nuclei templates, tool configs)
+PyYAML>=6.0.1
+
+# ──────────────────────────────────────────────────────────────────────────
+# CRYPTOGRAPHY & JWT
+# ──────────────────────────────────────────────────────────────────────────
+
+# JWT decoding & manipulation for Phase 10 JWT analysis
+PyJWT>=2.8.0
+
+# Cryptographic primitives (TLS certificate analysis)
+cryptography>=42.0.0
+
+# ──────────────────────────────────────────────────────────────────────────
+# OSINT & INTELLIGENCE (Phase 8)
+# ──────────────────────────────────────────────────────────────────────────
+
+# S3/GCS bucket analysis helpers
+boto3>=1.34.0
+
+# GitHub API client (gitrob supplement, token-based OSINT)
+PyGithub>=2.1.0
+
+# ──────────────────────────────────────────────────────────────────────────
+# SCANNING HELPERS
+# ──────────────────────────────────────────────────────────────────────────
+
+# Python wrapper for Shodan (optional enrichment)
+shodan>=1.31.0
+
+# WHOIS lookups (supplements system whois binary)
+python-whois>=0.9.4
+
+# Certificate Transparency log queries
+certifi>=2024.2.2
+
+# ──────────────────────────────────────────────────────────────────────────
+# UTILITIES
+# ──────────────────────────────────────────────────────────────────────────
+
+# Colourised diff output for response comparison (IDOR phase)
+colorama>=0.4.6
+
+# Progress persistence across runs
+tqdm>=4.66.0
+
+# Concurrency helpers
+more-itertools>=10.2.0
+
+# ──────────────────────────────────────────────────────────────────────────
+# OPTIONAL — Enhanced capabilities (install manually if needed)
+# ──────────────────────────────────────────────────────────────────────────
+
+# Metasploit RPC client (enables live MSF automation without CLI)
+# pymetasploit3>=1.0.3
+
+# Selenium / headless Chrome for advanced JS rendering (screenshots fallback)
+# selenium>=4.18.0
+
+# Burp Suite REST API client
+# burp-rest-api>=1.0.0
+
+# CVSS vector parsing (enhances report scoring)
+# cvss>=2.6
+
+# ──────────────────────────────────────────────────────────────────────────
+# DEVELOPMENT ONLY (not required for production use)
+# ──────────────────────────────────────────────────────────────────────────
+
+# pytest>=7.4.0
+# pytest-asyncio>=0.23.0
+# black>=24.1.0
+# mypy>=1.8.0
